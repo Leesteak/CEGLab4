@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY FLEX10K
 set_global_assignment -name DEVICE "EPF10K70RC240-4"
-set_global_assignment -name TOP_LEVEL_ENTITY CEG_Lab4
+set_global_assignment -name TOP_LEVEL_ENTITY lab3controller
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:54:23  NOVEMBER 06, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
