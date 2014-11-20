@@ -1,10 +1,10 @@
-Fitter Status : Successful - Thu Nov 06 13:19:06 2014
+Fitter Status : Successful - Thu Nov 20 14:19:39 2014
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : CEG_Lab4
-Top-level Entity Name : lab3controller
+Top-level Entity Name : lab3top
 Family : FLEX10K
 Device : EPF10K70RC240-4
 Timing Models : Final
-Total logic elements : 0 / 3,744 ( 0 % )
-Total pins : 49 / 189 ( 26 % )
-Total memory bits : 0 / 18,432 ( 0 % )
+Total logic elements : 252 / 3,744 ( 7 % )
+Total pins : 52 / 189 ( 28 % )
+Total memory bits : 2,048 / 18,432 ( 11 % )

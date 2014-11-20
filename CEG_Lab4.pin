@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Thu Nov 06 13:19:06 2014
+File Generation Date & Time: Thu Nov 20 14:19:39 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "CEG_Lab4"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -47,71 +47,71 @@ CONF_DONE                    : 2         : bidir  :                   :         
 nCEO                         : 3         : output :                   :         :           :                
 TDO                          : 4         : output :                   :         :           :                
 VCC_INT                      : 5         : power  :                   : 5.0V    :           :                
-DR6                          : 6         : input  : TTL               :         :           : N              
-GND*                         : 7         :        :                   :         :           :                
-GND*                         : 8         :        :                   :         :           :                
-GND*                         : 9         :        :                   :         :           :                
+a1                           : 6         : output : TTL               :         :           : Y              
+b1                           : 7         : output : TTL               :         :           : Y              
+c1                           : 8         : output : TTL               :         :           : Y              
+d1                           : 9         : output : TTL               :         :           : Y              
 GND_INT                      : 10        : gnd    :                   :         :           :                
-GND*                         : 11        :        :                   :         :           :                
-IR_Load                      : 12        : output : TTL               :         :           : N              
-T1                           : 13        : input  : TTL               :         :           : N              
-GND*                         : 14        :        :                   :         :           :                
-GND*                         : 15        :        :                   :         :           :                
+e1                           : 11        : output : TTL               :         :           : Y              
+f1                           : 12        : output : TTL               :         :           : Y              
+g1                           : 13        : output : TTL               :         :           : Y              
+dec1                         : 14        : output : TTL               :         :           : Y              
+AC_Clear                     : 15        : output : TTL               :         :           : N              
 VCC_INT                      : 16        : power  :                   : 5.0V    :           :                
-DR2                          : 17        : input  : TTL               :         :           : N              
-GND*                         : 18        :        :                   :         :           :                
-GND*                         : 19        :        :                   :         :           :                
-GND*                         : 20        :        :                   :         :           :                
-GND*                         : 21        :        :                   :         :           :                
+a2                           : 17        : output : TTL               :         :           : Y              
+b2                           : 18        : output : TTL               :         :           : Y              
+c2                           : 19        : output : TTL               :         :           : Y              
+d2                           : 20        : output : TTL               :         :           : Y              
+e2                           : 21        : output : TTL               :         :           : Y              
 GND_INT                      : 22        : gnd    :                   :         :           :                
-GND*                         : 23        :        :                   :         :           :                
-GND*                         : 24        :        :                   :         :           :                
-GND*                         : 25        :        :                   :         :           :                
+f2                           : 23        : output : TTL               :         :           : Y              
+g2                           : 24        : output : TTL               :         :           : Y              
+dec2                         : 25        : output : TTL               :         :           : Y              
 GND*                         : 26        :        :                   :         :           :                
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
 GND*                         : 28        :        :                   :         :           :                
 GND*                         : 29        :        :                   :         :           :                
 GND*                         : 30        :        :                   :         :           :                
-DR5                          : 31        : input  : TTL               :         :           : N              
+GND*                         : 31        :        :                   :         :           :                
 GND_INT                      : 32        : gnd    :                   :         :           :                
-GND*                         : 33        :        :                   :         :           :                
-GND*                         : 34        :        :                   :         :           :                
-memwrite                     : 35        : output : TTL               :         :           : N              
-GND*                         : 36        :        :                   :         :           :                
+DIP7                         : 33        : input  : TTL               :         :           : Y              
+DIP6                         : 34        : input  : TTL               :         :           : Y              
+DIP5                         : 35        : input  : TTL               :         :           : Y              
+DIP4                         : 36        : input  : TTL               :         :           : Y              
 VCC_INT                      : 37        : power  :                   : 5.0V    :           :                
-GND*                         : 38        :        :                   :         :           :                
-GND*                         : 39        :        :                   :         :           :                
-GND*                         : 40        :        :                   :         :           :                
-GND*                         : 41        :        :                   :         :           :                
+DIP3                         : 38        : input  : TTL               :         :           : Y              
+DIP2                         : 39        : input  : TTL               :         :           : Y              
+DIP1                         : 40        : input  : TTL               :         :           : Y              
+DIP0                         : 41        : input  : TTL               :         :           : Y              
 GND_INT                      : 42        : gnd    :                   :         :           :                
 GND*                         : 43        :        :                   :         :           :                
-ALU_Sel1                     : 44        : output : TTL               :         :           : N              
-GND*                         : 45        :        :                   :         :           :                
-T0                           : 46        : input  : TTL               :         :           : N              
+GND*                         : 44        :        :                   :         :           :                
+ALU_Sel1                     : 45        : output : TTL               :         :           : N              
+OUTD_7                       : 46        : output : TTL               :         :           : N              
 VCC_INT                      : 47        : power  :                   : 5.0V    :           :                
 GND*                         : 48        :        :                   :         :           :                
-T10                          : 49        : input  : TTL               :         :           : N              
-Halt                         : 50        : output : TTL               :         :           : N              
-IR0                          : 51        : input  : TTL               :         :           : N              
+GND*                         : 49        :        :                   :         :           :                
+GND*                         : 50        :        :                   :         :           :                
+GND*                         : 51        :        :                   :         :           :                
 GND_INT                      : 52        : gnd    :                   :         :           :                
 GND*                         : 53        :        :                   :         :           :                
-AC_Inc                       : 54        : output : TTL               :         :           : N              
+OUTD_1                       : 54        : output : TTL               :         :           : N              
 GND*                         : 55        :        :                   :         :           :                
 GND*                         : 56        :        :                   :         :           :                
 VCC_INT                      : 57        : power  :                   : 5.0V    :           :                
 TMS                          : 58        : input  :                   :         :           :                
 TRST                         : 59        : input  :                   :         :           :                
 nSTATUS                      : 60        : bidir  :                   :         :           :                
-DR1                          : 61        : input  : TTL               :         :           : N              
+GND*                         : 61        :        :                   :         :           :                
 GND*                         : 62        :        :                   :         :           :                
 GND*                         : 63        :        :                   :         :           :                
 GND*                         : 64        :        :                   :         :           :                
-T3                           : 65        : input  : TTL               :         :           : N              
-GND*                         : 66        :        :                   :         :           :                
+DR_Load                      : 65        : output : TTL               :         :           : N              
+DR_Inc                       : 66        : output : TTL               :         :           : N              
 GND*                         : 67        :        :                   :         :           :                
 GND*                         : 68        :        :                   :         :           :                
 GND_INT                      : 69        : gnd    :                   :         :           :                
-DR3                          : 70        : input  : TTL               :         :           : N              
+GND*                         : 70        :        :                   :         :           :                
 GND*                         : 71        :        :                   :         :           :                
 GND*                         : 72        :        :                   :         :           :                
 GND*                         : 73        :        :                   :         :           :                
@@ -119,49 +119,49 @@ GND*                         : 74        :        :                   :         
 GND*                         : 75        :        :                   :         :           :                
 GND*                         : 76        :        :                   :         :           :                
 VCC_INT                      : 77        : power  :                   : 5.0V    :           :                
-GND*                         : 78        :        :                   :         :           :                
-AC_Clear                     : 79        : output : TTL               :         :           : N              
-DR0                          : 80        : input  : TTL               :         :           : N              
+ALU_Sel0                     : 78        : output : TTL               :         :           : N              
+AC_Load                      : 79        : output : TTL               :         :           : N              
+GND*                         : 80        :        :                   :         :           :                
 GND*                         : 81        :        :                   :         :           :                
-GND*                         : 82        :        :                   :         :           :                
+OUTD_0                       : 82        : output : TTL               :         :           : N              
 GND*                         : 83        :        :                   :         :           :                
-IR7                          : 84        : input  : TTL               :         :           : N              
+GND*                         : 84        :        :                   :         :           :                
 GND_INT                      : 85        : gnd    :                   :         :           :                
 GND*                         : 86        :        :                   :         :           :                
 GND*                         : 87        :        :                   :         :           :                
-GND*                         : 88        :        :                   :         :           :                
+OUTD_2                       : 88        : output : TTL               :         :           : N              
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
-IR4                          : 90        : input  : TTL               :         :           : N              
-GND+                         : 91        :        :                   :         :           :                
-IR3                          : 92        : input  : TTL               :         :           : N              
+GND+                         : 90        :        :                   :         :           :                
+clk                          : 91        : input  : TTL               :         :           : Y              
+GND+                         : 92        :        :                   :         :           :                
 GND_INT                      : 93        : gnd    :                   :         :           :                
 GND*                         : 94        :        :                   :         :           :                
 GND*                         : 95        :        :                   :         :           :                
 VCC_INT                      : 96        : power  :                   : 5.0V    :           :                
-BusSel0                      : 97        : output : TTL               :         :           : N              
+OUTD_4                       : 97        : output : TTL               :         :           : N              
 GND*                         : 98        :        :                   :         :           :                
 GND*                         : 99        :        :                   :         :           :                
-Stop                         : 100       : input  : TTL               :         :           : N              
+PC_Inc                       : 100       : output : TTL               :         :           : N              
 GND*                         : 101       :        :                   :         :           :                
-ALU_Sel0                     : 102       : output : TTL               :         :           : N              
-BusSel1                      : 103       : output : TTL               :         :           : N              
+GND*                         : 102       :        :                   :         :           :                
+GND*                         : 103       :        :                   :         :           :                
 GND_INT                      : 104       : gnd    :                   :         :           :                
-T8                           : 105       : input  : TTL               :         :           : N              
-GND*                         : 106       :        :                   :         :           :                
+GND*                         : 105       :        :                   :         :           :                
+AC_Inc                       : 106       : output : TTL               :         :           : N              
 GND*                         : 107       :        :                   :         :           :                
-GND*                         : 108       :        :                   :         :           :                
-DR_Inc                       : 109       : output : TTL               :         :           : N              
-T5                           : 110       : input  : TTL               :         :           : N              
+BusSel0                      : 108       : output : TTL               :         :           : N              
+memwrite                     : 109       : output : TTL               :         :           : N              
+GND*                         : 110       :        :                   :         :           :                
 GND*                         : 111       :        :                   :         :           :                
 VCC_INT                      : 112       : power  :                   : 5.0V    :           :                
-ALU_Sel2                     : 113       : output : TTL               :         :           : N              
+GND*                         : 113       :        :                   :         :           :                
 GND*                         : 114       :        :                   :         :           :                
 GND*                         : 115       :        :                   :         :           :                
 GND*                         : 116       :        :                   :         :           :                
 GND*                         : 117       :        :                   :         :           :                
-AR_Load                      : 118       : output : TTL               :         :           : N              
-T4                           : 119       : input  : TTL               :         :           : N              
-T9                           : 120       : input  : TTL               :         :           : N              
+GND*                         : 118       :        :                   :         :           :                
+GND*                         : 119       :        :                   :         :           :                
+GND*                         : 120       :        :                   :         :           :                
 nCONFIG                      : 121       : input  :                   :         :           :                
 VCC_INT                      : 122       : power  :                   : 5.0V    :           :                
 MSEL1                        : 123       : input  :                   :         :           :                
@@ -170,53 +170,53 @@ GND_INT                      : 125       : gnd    :                   :         
 GND*                         : 126       :        :                   :         :           :                
 GND*                         : 127       :        :                   :         :           :                
 GND*                         : 128       :        :                   :         :           :                
-AC_Load                      : 129       : output : TTL               :         :           : N              
+GND*                         : 129       :        :                   :         :           :                
 VCC_INT                      : 130       : power  :                   : 5.0V    :           :                
 GND*                         : 131       :        :                   :         :           :                
 GND*                         : 132       :        :                   :         :           :                
 GND*                         : 133       :        :                   :         :           :                
-DR7                          : 134       : input  : TTL               :         :           : N              
+GND*                         : 134       :        :                   :         :           :                
 GND_INT                      : 135       : gnd    :                   :         :           :                
-IR1                          : 136       : input  : TTL               :         :           : N              
+GND*                         : 136       :        :                   :         :           :                
 GND*                         : 137       :        :                   :         :           :                
-DR4                          : 138       : input  : TTL               :         :           : N              
+GND*                         : 138       :        :                   :         :           :                
 GND*                         : 139       :        :                   :         :           :                
 VCC_INT                      : 140       : power  :                   : 5.0V    :           :                
 GND*                         : 141       :        :                   :         :           :                
 GND*                         : 142       :        :                   :         :           :                
-DR_Load                      : 143       : output : TTL               :         :           : N              
-GND*                         : 144       :        :                   :         :           :                
+OUTD_Load                    : 143       : output : TTL               :         :           : N              
+SC-Clear                     : 144       : output : TTL               :         :           : N              
 GND_INT                      : 145       : gnd    :                   :         :           :                
 GND*                         : 146       :        :                   :         :           :                
 GND*                         : 147       :        :                   :         :           :                
 GND*                         : 148       :        :                   :         :           :                
-IR2                          : 149       : input  : TTL               :         :           : N              
+GND*                         : 149       :        :                   :         :           :                
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
-OUTD_Load                    : 151       : output : TTL               :         :           : N              
+GND*                         : 151       :        :                   :         :           :                
 GND*                         : 152       :        :                   :         :           :                
 GND*                         : 153       :        :                   :         :           :                
-GND*                         : 154       :        :                   :         :           :                
+Halt                         : 154       : output : TTL               :         :           : N              
 GND_INT                      : 155       : gnd    :                   :         :           :                
 GND*                         : 156       :        :                   :         :           :                
 GND*                         : 157       :        :                   :         :           :                
 GND*                         : 158       :        :                   :         :           :                
 GND*                         : 159       :        :                   :         :           :                
 VCC_INT                      : 160       : power  :                   : 5.0V    :           :                
-T12                          : 161       : input  : TTL               :         :           : N              
+GND*                         : 161       :        :                   :         :           :                
 GND*                         : 162       :        :                   :         :           :                
-SC_Clear                     : 163       : output : TTL               :         :           : N              
+GND*                         : 163       :        :                   :         :           :                
 GND*                         : 164       :        :                   :         :           :                
 GND_INT                      : 165       : gnd    :                   :         :           :                
-GND*                         : 166       :        :                   :         :           :                
-GND*                         : 167       :        :                   :         :           :                
+IR_Load                      : 166       : output : TTL               :         :           : N              
+PC_Load                      : 167       : output : TTL               :         :           : N              
 GND*                         : 168       :        :                   :         :           :                
-GND*                         : 169       :        :                   :         :           :                
+ALU_Sel2                     : 169       : output : TTL               :         :           : N              
 VCC_INT                      : 170       : power  :                   : 5.0V    :           :                
-GND*                         : 171       :        :                   :         :           :                
+OUTD_5                       : 171       : output : TTL               :         :           : N              
 GND*                         : 172       :        :                   :         :           :                
 GND*                         : 173       :        :                   :         :           :                
 GND*                         : 174       :        :                   :         :           :                
-T6                           : 175       : input  : TTL               :         :           : N              
+GND*                         : 175       :        :                   :         :           :                
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                
 nCE                          : 178       : input  :                   :         :           :                
@@ -231,29 +231,29 @@ GND*                         : 186       :        :                   :         
 GND*                         : 187       :        :                   :         :           :                
 GND*                         : 188       :        :                   :         :           :                
 VCC_INT                      : 189       : power  :                   : 5.0V    :           :                
-GND*                         : 190       :        :                   :         :           :                
+BusSel2                      : 190       : output : TTL               :         :           : N              
 GND*                         : 191       :        :                   :         :           :                
 GND*                         : 192       :        :                   :         :           :                
-GND*                         : 193       :        :                   :         :           :                
+AR_Load                      : 193       : output : TTL               :         :           : N              
 GND*                         : 194       :        :                   :         :           :                
-BusSel2                      : 195       : output : TTL               :         :           : N              
+GND*                         : 195       :        :                   :         :           :                
 GND*                         : 196       :        :                   :         :           :                
 GND_INT                      : 197       : gnd    :                   :         :           :                
 GND*                         : 198       :        :                   :         :           :                
-GND*                         : 199       :        :                   :         :           :                
+BusSel1                      : 199       : output : TTL               :         :           : N              
 GND*                         : 200       :        :                   :         :           :                
 GND*                         : 201       :        :                   :         :           :                
 GND*                         : 202       :        :                   :         :           :                
 GND*                         : 203       :        :                   :         :           :                
-T2                           : 204       : input  : TTL               :         :           : N              
+GND*                         : 204       :        :                   :         :           :                
 VCC_INT                      : 205       : power  :                   : 5.0V    :           :                
 GND*                         : 206       :        :                   :         :           :                
-PC_Inc                       : 207       : output : TTL               :         :           : N              
-GND*                         : 208       :        :                   :         :           :                
+OUTD_6                       : 207       : output : TTL               :         :           : N              
+OUTD_3                       : 208       : output : TTL               :         :           : N              
 GND*                         : 209       :        :                   :         :           :                
-IR5                          : 210       : input  : TTL               :         :           : N              
+GND+                         : 210       :        :                   :         :           :                
 GND+                         : 211       :        :                   :         :           :                
-IR6                          : 212       : input  : TTL               :         :           : N              
+GND+                         : 212       :        :                   :         :           :                
 GND*                         : 213       :        :                   :         :           :                
 GND*                         : 214       :        :                   :         :           :                
 GND*                         : 215       :        :                   :         :           :                
@@ -264,9 +264,9 @@ GND*                         : 219       :        :                   :         
 GND*                         : 220       :        :                   :         :           :                
 GND*                         : 221       :        :                   :         :           :                
 GND*                         : 222       :        :                   :         :           :                
-T7                           : 223       : input  : TTL               :         :           : N              
+GND*                         : 223       :        :                   :         :           :                
 VCC_INT                      : 224       : power  :                   : 5.0V    :           :                
-T11                          : 225       : input  : TTL               :         :           : N              
+GND*                         : 225       :        :                   :         :           :                
 GND*                         : 226       :        :                   :         :           :                
 GND*                         : 227       :        :                   :         :           :                
 GND*                         : 228       :        :                   :         :           :                
@@ -274,7 +274,7 @@ GND*                         : 229       :        :                   :         
 GND*                         : 230       :        :                   :         :           :                
 GND*                         : 231       :        :                   :         :           :                
 GND_INT                      : 232       : gnd    :                   :         :           :                
-PC_Load                      : 233       : output : TTL               :         :           : N              
+GND*                         : 233       :        :                   :         :           :                
 GND*                         : 234       :        :                   :         :           :                
 GND*                         : 235       :        :                   :         :           :                
 GND*                         : 236       :        :                   :         :           :                

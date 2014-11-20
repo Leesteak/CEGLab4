@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CEG_Lab4
-Thu Nov 06 13:19:00 2014
+Thu Nov 20 14:19:26 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,8 +12,20 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Analysis & Synthesis Messages
+  7. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: ram256x8:104|lpm_ram_dq:lpm_ram_dq_component
+ 12. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:9|81mux:1
+ 13. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:10|81mux:1
+ 14. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:11|81mux:1
+ 15. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:12|81mux:1
+ 16. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:16|81mux:1
+ 17. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:15|81mux:1
+ 18. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:14|81mux:1
+ 19. Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:13|81mux:1
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -39,14 +51,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Nov 06 13:18:59 2014        ;
+; Analysis & Synthesis Status ; Successful - Thu Nov 20 14:19:26 2014        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; CEG_Lab4                                     ;
-; Top-level Entity Name       ; lab3controller                               ;
+; Top-level Entity Name       ; lab3top                                      ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 0                                            ;
-; Total pins                  ; 49                                           ;
-; Total memory bits           ; 0                                            ;
+; Total logic elements        ; 252                                          ;
+; Total pins                  ; 52                                           ;
+; Total memory bits           ; 2,048                                        ;
 +-----------------------------+----------------------------------------------+
 
 
@@ -56,7 +68,7 @@ applicable agreement for further details.
 ; Option                                                       ; Setting         ; Default Value ;
 +--------------------------------------------------------------+-----------------+---------------+
 ; Device                                                       ; EPF10K70RC240-4 ;               ;
-; Top-level entity name                                        ; lab3controller  ; CEG_Lab4      ;
+; Top-level entity name                                        ; lab3top         ; CEG_Lab4      ;
 ; Family name                                                  ; FLEX10K         ; Stratix II    ;
 ; Use Generated Physical Constraints File                      ; Off             ;               ;
 ; Use smart compilation                                        ; Off             ; Off           ;
@@ -112,13 +124,41 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; supportfiles/lab3controller.bdf  ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/lab3controller.bdf ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                             ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
+; supportfiles/alu1bit.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/alu1bit.bdf                         ;
+; supportfiles/alu8bits.bdf           ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/alu8bits.bdf                        ;
+; supportfiles/busmultiplexer.vhd     ; yes             ; User VHDL File                     ; E:/CEG2136 Lab4/CEGLab4/supportfiles/busmultiplexer.vhd                  ;
+; supportfiles/controlregister.bdf    ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/controlregister.bdf                 ;
+; supportfiles/counter1bit.bdf        ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/counter1bit.bdf                     ;
+; supportfiles/counter4bits.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/counter4bits.bdf                    ;
+; supportfiles/counter8bits.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/counter8bits.bdf                    ;
+; supportfiles/lab3controller.bdf     ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/lab3controller.bdf                  ;
+; supportfiles/lab3top.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/lab3top.bdf                         ;
+; supportfiles/partialadder1bit.bdf   ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/partialadder1bit.bdf                ;
+; supportfiles/ram256x8.vhd           ; yes             ; User Wizard-Generated File         ; E:/CEG2136 Lab4/CEGLab4/supportfiles/ram256x8.vhd                        ;
+; supportfiles/register1bit.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/register1bit.bdf                    ;
+; supportfiles/register8bits.bdf      ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/register8bits.bdf                   ;
+; supportfiles/seg7.vhd               ; yes             ; User VHDL File                     ; E:/CEG2136 Lab4/CEGLab4/supportfiles/seg7.vhd                            ;
+; supportfiles/sevensegcontroller.bdf ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab4/CEGLab4/supportfiles/sevensegcontroller.bdf              ;
+; lpm_ram_dq.tdf                      ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
+; altram.inc                          ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/altram.inc     ;
+; lpm_mux.inc                         ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc    ;
+; lpm_decode.inc                      ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc ;
+; aglobal90.inc                       ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc  ;
+; altram.tdf                          ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/altram.tdf     ;
+; memmodes.inc                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc ;
+; altsyncram.inc                      ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc ;
+; altqpram.inc                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc   ;
+; 81mux.tdf                           ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/81mux.tdf    ;
+; aglobal.inc                         ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/aglobal.inc    ;
+; f81mux.bdf                          ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/f81mux.bdf   ;
+; 74182.bdf                           ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/74182.bdf    ;
+; 16dmux.bdf                          ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/16dmux.bdf   ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -126,26 +166,174 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 0          ;
-; Total combinational functions  ; 0          ;
-;     -- Total 4-input functions ; 0          ;
-;     -- Total 3-input functions ; 0          ;
-;     -- Total 2-input functions ; 0          ;
-;     -- Total 1-input functions ; 0          ;
+; Total logic elements           ; 252        ;
+; Total combinational functions  ; 244        ;
+;     -- Total 4-input functions ; 129        ;
+;     -- Total 3-input functions ; 97         ;
+;     -- Total 2-input functions ; 15         ;
+;     -- Total 1-input functions ; 3          ;
 ;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 0          ;
-; I/O pins                       ; 49         ;
+; Total registers                ; 78         ;
+; I/O pins                       ; 52         ;
+; Total memory bits              ; 2048       ;
+; Maximum fan-out node           ; clk        ;
+; Maximum fan-out                ; 86         ;
+; Total fan-out                  ; 1097       ;
+; Average fan-out                ; 3.52       ;
 +--------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |lab3controller            ; 0 (0)       ; 0            ; 0           ; 49   ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3controller     ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; |lab3top                                ; 252 (0)     ; 78           ; 2048        ; 52   ; 174 (0)      ; 8 (0)             ; 70 (0)           ; 0 (0)           ; 0 (0)      ; |lab3top                                                          ; work         ;
+;    |16dmux:99|                          ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|16dmux:99                                                ; work         ;
+;    |alu8bits:47|                        ; 62 (4)      ; 0            ; 0           ; 0    ; 62 (4)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47                                              ; work         ;
+;       |74182:21|                        ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|74182:21                                     ; work         ;
+;       |74182:2|                         ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|74182:2                                      ; work         ;
+;       |alu1bit:10|                      ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:10                                   ; work         ;
+;          |81mux:1|                      ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:10|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:10|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:10|partialadder1bit:21               ; work         ;
+;       |alu1bit:11|                      ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:11                                   ; work         ;
+;          |81mux:1|                      ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:11|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:11|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:11|partialadder1bit:21               ; work         ;
+;       |alu1bit:12|                      ; 6 (1)       ; 0            ; 0           ; 0    ; 6 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:12                                   ; work         ;
+;          |81mux:1|                      ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:12|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:12|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:12|partialadder1bit:21               ; work         ;
+;       |alu1bit:13|                      ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:13                                   ; work         ;
+;          |81mux:1|                      ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:13|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:13|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:13|partialadder1bit:21               ; work         ;
+;       |alu1bit:14|                      ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:14                                   ; work         ;
+;          |81mux:1|                      ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:14|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:14|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:14|partialadder1bit:21               ; work         ;
+;       |alu1bit:15|                      ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:15                                   ; work         ;
+;          |81mux:1|                      ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:15|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:15|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:15|partialadder1bit:21               ; work         ;
+;       |alu1bit:16|                      ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:16                                   ; work         ;
+;          |81mux:1|                      ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:16|81mux:1                           ; work         ;
+;             |f81mux:sub|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:16|81mux:1|f81mux:sub                ; work         ;
+;          |partialadder1bit:21|          ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:16|partialadder1bit:21               ; work         ;
+;       |alu1bit:9|                       ; 6 (0)       ; 0            ; 0           ; 0    ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:9                                    ; work         ;
+;          |81mux:1|                      ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:9|81mux:1                            ; work         ;
+;             |f81mux:sub|                ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:9|81mux:1|f81mux:sub                 ; work         ;
+;          |partialadder1bit:21|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|alu8bits:47|alu1bit:9|partialadder1bit:21                ; work         ;
+;    |busmultiplexer:67|                  ; 40 (40)     ; 0            ; 0           ; 0    ; 40 (40)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|busmultiplexer:67                                        ; work         ;
+;    |controlregister:101|                ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |lab3top|controlregister:101                                      ; work         ;
+;    |counter4bits:98|                    ; 5 (0)       ; 4            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter4bits:98                                          ; work         ;
+;       |counter1bit:33|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter4bits:98|counter1bit:33                           ; work         ;
+;       |counter1bit:34|                  ; 2 (2)       ; 1            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter4bits:98|counter1bit:34                           ; work         ;
+;       |counter1bit:35|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter4bits:98|counter1bit:35                           ; work         ;
+;       |counter1bit:36|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter4bits:98|counter1bit:36                           ; work         ;
+;    |counter8bits:58|                    ; 38 (2)      ; 8            ; 0           ; 0    ; 30 (2)       ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58                                          ; work         ;
+;       |counter1bit:46|                  ; 6 (6)       ; 1            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:46                           ; work         ;
+;       |counter1bit:47|                  ; 3 (3)       ; 1            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:47                           ; work         ;
+;       |counter1bit:48|                  ; 4 (4)       ; 1            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:48                           ; work         ;
+;       |counter1bit:49|                  ; 3 (3)       ; 1            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:49                           ; work         ;
+;       |counter1bit:50|                  ; 4 (4)       ; 1            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:50                           ; work         ;
+;       |counter1bit:51|                  ; 6 (6)       ; 1            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:51                           ; work         ;
+;       |counter1bit:52|                  ; 4 (4)       ; 1            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:52                           ; work         ;
+;       |counter1bit:53|                  ; 6 (6)       ; 1            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:58|counter1bit:53                           ; work         ;
+;    |counter8bits:59|                    ; 15 (0)      ; 8            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59                                          ; work         ;
+;       |counter1bit:46|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:46                           ; work         ;
+;       |counter1bit:47|                  ; 3 (3)       ; 1            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:47                           ; work         ;
+;       |counter1bit:48|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:48                           ; work         ;
+;       |counter1bit:49|                  ; 2 (2)       ; 1            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:49                           ; work         ;
+;       |counter1bit:50|                  ; 3 (3)       ; 1            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:50                           ; work         ;
+;       |counter1bit:51|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:51                           ; work         ;
+;       |counter1bit:52|                  ; 2 (2)       ; 1            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:52                           ; work         ;
+;       |counter1bit:53|                  ; 2 (2)       ; 1            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:59|counter1bit:53                           ; work         ;
+;    |counter8bits:60|                    ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60                                          ; work         ;
+;       |counter1bit:46|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:46                           ; work         ;
+;       |counter1bit:47|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:47                           ; work         ;
+;       |counter1bit:48|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:48                           ; work         ;
+;       |counter1bit:49|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:49                           ; work         ;
+;       |counter1bit:50|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:50                           ; work         ;
+;       |counter1bit:51|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:51                           ; work         ;
+;       |counter1bit:52|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:52                           ; work         ;
+;       |counter1bit:53|                  ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|counter8bits:60|counter1bit:53                           ; work         ;
+;    |lab3controller:107|                 ; 14 (14)     ; 0            ; 0           ; 0    ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|lab3controller:107                                       ; work         ;
+;    |ram256x8:104|                       ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|ram256x8:104                                             ; work         ;
+;       |lpm_ram_dq:lpm_ram_dq_component| ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|ram256x8:104|lpm_ram_dq:lpm_ram_dq_component             ; work         ;
+;          |altram:sram|                  ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|ram256x8:104|lpm_ram_dq:lpm_ram_dq_component|altram:sram ; work         ;
+;    |register8bits:63|                   ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63                                         ; work         ;
+;       |register1bit:23|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:23                         ; work         ;
+;       |register1bit:24|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:24                         ; work         ;
+;       |register1bit:25|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:25                         ; work         ;
+;       |register1bit:26|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:26                         ; work         ;
+;       |register1bit:27|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:27                         ; work         ;
+;       |register1bit:28|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:28                         ; work         ;
+;       |register1bit:29|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:29                         ; work         ;
+;       |register1bit:30|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:63|register1bit:30                         ; work         ;
+;    |register8bits:64|                   ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64                                         ; work         ;
+;       |register1bit:23|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:23                         ; work         ;
+;       |register1bit:24|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:24                         ; work         ;
+;       |register1bit:25|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:25                         ; work         ;
+;       |register1bit:26|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:26                         ; work         ;
+;       |register1bit:27|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:27                         ; work         ;
+;       |register1bit:28|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:28                         ; work         ;
+;       |register1bit:29|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:29                         ; work         ;
+;       |register1bit:30|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:64|register1bit:30                         ; work         ;
+;    |register8bits:66|                   ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66                                         ; work         ;
+;       |register1bit:23|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:23                         ; work         ;
+;       |register1bit:24|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:24                         ; work         ;
+;       |register1bit:25|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:25                         ; work         ;
+;       |register1bit:26|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:26                         ; work         ;
+;       |register1bit:27|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:27                         ; work         ;
+;       |register1bit:28|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:28                         ; work         ;
+;       |register1bit:29|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:29                         ; work         ;
+;       |register1bit:30|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:66|register1bit:30                         ; work         ;
+;    |register8bits:69|                   ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69                                         ; work         ;
+;       |register1bit:23|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:23                         ; work         ;
+;       |register1bit:24|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:24                         ; work         ;
+;       |register1bit:25|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:25                         ; work         ;
+;       |register1bit:26|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:26                         ; work         ;
+;       |register1bit:27|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:27                         ; work         ;
+;       |register1bit:28|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:28                         ; work         ;
+;       |register1bit:29|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:29                         ; work         ;
+;       |register1bit:30|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |lab3top|register8bits:69|register1bit:30                         ; work         ;
+;    |sevensegcontroller:12|              ; 14 (0)      ; 0            ; 0           ; 0    ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|sevensegcontroller:12                                    ; work         ;
+;       |seg7:1|                          ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|sevensegcontroller:12|seg7:1                             ; work         ;
+;       |seg7:2|                          ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |lab3top|sevensegcontroller:12|seg7:2                             ; work         ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                              ;
++------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-----------+
+; Name                                                             ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF       ;
++------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-----------+
+; ram256x8:104|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; Adder.mif ;
++------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+-----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; register1bit:100|1                    ; Stuck at VCC due to stuck port data_in ;
+; controlregister:101|4                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                             ;
++--------------------+---------------------------+----------------------------------------+
+; Register name      ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------+---------------------------+----------------------------------------+
+; register1bit:100|1 ; Stuck at VCC              ; controlregister:101|4                  ;
+;                    ; due to stuck port data_in ;                                        ;
++--------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -153,14 +341,149 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram256x8:104|lpm_ram_dq:lpm_ram_dq_component ;
++------------------------+--------------+---------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                              ;
++------------------------+--------------+---------------------------------------------------+
+; LPM_WIDTH              ; 8            ; Signed Integer                                    ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer                                    ;
+; LPM_NUMWORDS           ; 256          ; Untyped                                           ;
+; LPM_INDATA             ; REGISTERED   ; Untyped                                           ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                                           ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                                           ;
+; LPM_FILE               ; Adder.mif    ; Untyped                                           ;
+; USE_EAB                ; ON           ; Untyped                                           ;
+; DEVICE_FAMILY          ; FLEX10K      ; Untyped                                           ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                    ;
++------------------------+--------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:9|81mux:1 ;
++------------------------+---------+-----------------------------------------+
+; Parameter Name         ; Value   ; Type                                    ;
++------------------------+---------+-----------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                 ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                          ;
++------------------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:10|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:11|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:12|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:16|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:15|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:14|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu8bits:47|alu1bit:13|81mux:1 ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -169,7 +492,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Nov 06 13:18:53 2014
+    Info: Processing started: Thu Nov 20 14:19:10 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CEG_Lab4 -c CEG_Lab4
 Info: Found 1 design units, including 1 entities, in source file supportfiles/alu1bit.bdf
     Info: Found entity 1: alu1bit
@@ -206,142 +529,71 @@ Info: Found 2 design units, including 1 entities, in source file supportfiles/se
     Info: Found entity 1: seg7
 Info: Found 1 design units, including 1 entities, in source file supportfiles/sevensegcontroller.bdf
     Info: Found entity 1: sevensegcontroller
-Info: Elaborating entity "lab3controller" for the top level hierarchy
-Warning: Block or symbol "NOT" of instance "inst3" overlaps another block or symbol
-Warning: Block or symbol "NOT" of instance "inst14" overlaps another block or symbol
-Warning: Block or symbol "NOT" of instance "inst15" overlaps another block or symbol
-Warning: Pin "Halt" is missing source
-Warning: Pin "SC_Clear" is missing source
-Warning: Pin "BusSel1" is missing source
-Warning: Pin "BusSel2" is missing source
-Warning: Pin "ALU_Sel0" is missing source
-Warning: Pin "BusSel0" is missing source
-Warning: Pin "ALU_Sel2" is missing source
-Warning: Pin "OUTD_Load" is missing source
-Warning: Pin "AC_Inc" is missing source
-Warning: Pin "ALU_Sel1" is missing source
-Warning: Pin "AC_Clear" is missing source
-Warning: Pin "IR_Load" is missing source
-Warning: Pin "DR_Inc" is missing source
-Warning: Pin "AC_Load" is missing source
-Warning: Pin "DR_Load" is missing source
-Warning: Pin "AR_Load" is missing source
-Warning: Pin "PC_Load" is missing source
-Warning: Pin "PC_Inc" is missing source
-Warning: Pin "memwrite" is missing source
-Warning: Pin "IR7" not connected
-Warning: Pin "T12" not connected
-Warning: Pin "T0" not connected
+Info: Elaborating entity "lab3top" for the top level hierarchy
+Warning: Bus "DIP7" is found using same base name "DIP7" which might lead to names conflict.
+Warning: Bus "BusSel2" is found using same base name "BusSel2" which might lead to names conflict.
+Warning: Bus "BusSel1" is found using same base name "BusSel1" which might lead to names conflict.
+Warning: Bus "BusSel0" is found using same base name "BusSel0" which might lead to names conflict.
+Warning: Bus "BusSel1" is found using same base name "BusSel1" which might lead to names conflict.
+Warning: Bus "BusSel0" is found using same base name "BusSel0" which might lead to names conflict.
+Warning: Bus "BusSel2" is found using same base name "BusSel2" which might lead to names conflict.
+Warning: Converted elements in bus name "BusSel" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning: Converted element name(s) from "BusSel[2..0]" to "BusSel2..0"
+Warning: Converted elements in bus name "DIP" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning: Converted element name(s) from "DIP[7..0]" to "DIP7..0"
+Info: Elaborating entity "sevensegcontroller" for hierarchy "sevensegcontroller:12"
+Info: Elaborating entity "seg7" for hierarchy "sevensegcontroller:12|seg7:2"
+Info: Elaborating entity "register8bits" for hierarchy "register8bits:66"
+Info: Elaborating entity "register1bit" for hierarchy "register8bits:66|register1bit:23"
+Info: Elaborating entity "controlregister" for hierarchy "controlregister:101"
+Info: Elaborating entity "lab3controller" for hierarchy "lab3controller:107"
 Warning: Pin "T4" not connected
-Warning: Pin "T2" not connected
-Warning: Pin "T1" not connected
-Warning: Pin "T3" not connected
-Warning: Pin "T8" not connected
-Warning: Pin "T6" not connected
-Warning: Pin "T5" not connected
-Warning: Pin "T7" not connected
-Warning: Pin "T10" not connected
-Warning: Pin "T9" not connected
-Warning: Pin "T11" not connected
-Warning: Pin "Stop" not connected
-Warning: Pin "DR0" not connected
-Warning: Pin "DR4" not connected
-Warning: Pin "DR3" not connected
-Warning: Pin "DR2" not connected
-Warning: Pin "DR1" not connected
-Warning: Pin "DR7" not connected
-Warning: Pin "DR6" not connected
-Warning: Pin "DR5" not connected
-Warning: Pin "IR0" not connected
-Warning: Pin "IR1" not connected
-Warning: Pin "IR2" not connected
-Warning: Pin "IR3" not connected
-Warning: Pin "IR4" not connected
-Warning: Pin "IR5" not connected
-Warning: Pin "IR6" not connected
-Warning: Primitive "VCC" of instance "28" not used
 Warning: Primitive "GND" of instance "29" not used
 Warning: Primitive "AND2" of instance "inst" not used
-Warning: Primitive "AND2" of instance "inst1" not used
-Warning: Primitive "AND2" of instance "inst10" not used
-Warning: Primitive "AND3" of instance "inst11" not used
-Warning: Primitive "AND3" of instance "inst12" not used
-Warning: Primitive "AND3" of instance "inst13" not used
-Warning: Primitive "NOT" of instance "inst14" not used
-Warning: Primitive "NOT" of instance "inst15" not used
-Warning: Primitive "NOT" of instance "inst16" not used
-Warning: Primitive "NOT" of instance "inst17" not used
-Warning: Primitive "NOT" of instance "inst18" not used
-Warning: Primitive "NOT" of instance "inst19" not used
-Warning: Primitive "AND2" of instance "inst2" not used
-Warning: Primitive "NOT" of instance "inst20" not used
-Warning: Primitive "NOT" of instance "inst21" not used
-Warning: Primitive "NOT" of instance "inst22" not used
 Warning: Primitive "NOT" of instance "inst3" not used
 Warning: Primitive "NOT" of instance "inst4" not used
-Warning: Primitive "NOT" of instance "inst5" not used
-Warning: Primitive "NOT" of instance "inst6" not used
-Warning: Primitive "AND2" of instance "inst7" not used
-Warning: Primitive "AND2" of instance "inst8" not used
-Warning: Primitive "AND2" of instance "inst9" not used
+Info: Elaborating entity "busmultiplexer" for hierarchy "busmultiplexer:67"
+Info: Elaborating entity "ram256x8" for hierarchy "ram256x8:104"
+Info: Elaborating entity "lpm_ram_dq" for hierarchy "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component"
+Info: Elaborated megafunction instantiation "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component"
+Info: Instantiated megafunction "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component" with the following parameter:
+    Info: Parameter "intended_device_family" = "FLEX10K"
+    Info: Parameter "lpm_address_control" = "REGISTERED"
+    Info: Parameter "lpm_file" = "Adder.mif"
+    Info: Parameter "lpm_indata" = "REGISTERED"
+    Info: Parameter "lpm_outdata" = "UNREGISTERED"
+    Info: Parameter "lpm_type" = "LPM_RAM_DQ"
+    Info: Parameter "lpm_width" = "8"
+    Info: Parameter "lpm_widthad" = "8"
+Info: Elaborating entity "altram" for hierarchy "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component|altram:sram"
+Info: Elaborated megafunction instantiation "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component|altram:sram", which is child of megafunction instantiation "ram256x8:104|lpm_ram_dq:lpm_ram_dq_component"
+Info: Elaborating entity "counter8bits" for hierarchy "counter8bits:60"
+Info: Elaborating entity "counter1bit" for hierarchy "counter8bits:60|counter1bit:49"
+Info: Elaborating entity "alu8bits" for hierarchy "alu8bits:47"
+Info: Elaborating entity "alu1bit" for hierarchy "alu8bits:47|alu1bit:9"
+Info: Elaborating entity "81mux" for hierarchy "alu8bits:47|alu1bit:9|81mux:1"
+Info: Elaborated megafunction instantiation "alu8bits:47|alu1bit:9|81mux:1"
+Info: Elaborating entity "f81mux" for hierarchy "alu8bits:47|alu1bit:9|81mux:1|f81mux:sub"
+Info: Elaborated megafunction instantiation "alu8bits:47|alu1bit:9|81mux:1|f81mux:sub", which is child of megafunction instantiation "alu8bits:47|alu1bit:9|81mux:1"
+Info: Elaborating entity "partialadder1bit" for hierarchy "alu8bits:47|alu1bit:9|partialadder1bit:21"
+Info: Elaborating entity "74182" for hierarchy "alu8bits:47|74182:2"
+Info: Elaborated megafunction instantiation "alu8bits:47|74182:2"
+Info: Elaborating entity "16dmux" for hierarchy "16dmux:99"
+Info: Elaborated megafunction instantiation "16dmux:99"
+Info: Elaborating entity "counter4bits" for hierarchy "counter4bits:98"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Halt" is stuck at GND
-    Warning (13410): Pin "SC_Clear" is stuck at GND
-    Warning (13410): Pin "BusSel1" is stuck at GND
-    Warning (13410): Pin "BusSel2" is stuck at GND
-    Warning (13410): Pin "ALU_Sel0" is stuck at GND
-    Warning (13410): Pin "BusSel0" is stuck at GND
-    Warning (13410): Pin "ALU_Sel2" is stuck at GND
-    Warning (13410): Pin "OUTD_Load" is stuck at GND
-    Warning (13410): Pin "AC_Inc" is stuck at GND
-    Warning (13410): Pin "ALU_Sel1" is stuck at GND
-    Warning (13410): Pin "AC_Clear" is stuck at GND
-    Warning (13410): Pin "IR_Load" is stuck at GND
-    Warning (13410): Pin "DR_Inc" is stuck at GND
-    Warning (13410): Pin "AC_Load" is stuck at GND
-    Warning (13410): Pin "DR_Load" is stuck at GND
-    Warning (13410): Pin "AR_Load" is stuck at GND
-    Warning (13410): Pin "PC_Load" is stuck at GND
+    Warning (13410): Pin "dec2" is stuck at VCC
     Warning (13410): Pin "PC_Inc" is stuck at GND
-    Warning (13410): Pin "memwrite" is stuck at GND
-Warning: Design contains 30 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "IR7"
-    Warning (15610): No output dependent on input pin "T12"
-    Warning (15610): No output dependent on input pin "T0"
-    Warning (15610): No output dependent on input pin "T4"
-    Warning (15610): No output dependent on input pin "T2"
-    Warning (15610): No output dependent on input pin "T1"
-    Warning (15610): No output dependent on input pin "T3"
-    Warning (15610): No output dependent on input pin "T8"
-    Warning (15610): No output dependent on input pin "T6"
-    Warning (15610): No output dependent on input pin "T5"
-    Warning (15610): No output dependent on input pin "T7"
-    Warning (15610): No output dependent on input pin "T10"
-    Warning (15610): No output dependent on input pin "T9"
-    Warning (15610): No output dependent on input pin "T11"
-    Warning (15610): No output dependent on input pin "Stop"
-    Warning (15610): No output dependent on input pin "DR0"
-    Warning (15610): No output dependent on input pin "DR4"
-    Warning (15610): No output dependent on input pin "DR3"
-    Warning (15610): No output dependent on input pin "DR2"
-    Warning (15610): No output dependent on input pin "DR1"
-    Warning (15610): No output dependent on input pin "DR7"
-    Warning (15610): No output dependent on input pin "DR6"
-    Warning (15610): No output dependent on input pin "DR5"
-    Warning (15610): No output dependent on input pin "IR0"
-    Warning (15610): No output dependent on input pin "IR1"
-    Warning (15610): No output dependent on input pin "IR2"
-    Warning (15610): No output dependent on input pin "IR3"
-    Warning (15610): No output dependent on input pin "IR4"
-    Warning (15610): No output dependent on input pin "IR5"
-    Warning (15610): No output dependent on input pin "IR6"
-Info: Implemented 49 device resources after synthesis - the final resource count might be different
-    Info: Implemented 30 input pins
-    Info: Implemented 19 output pins
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 220 megabytes
-    Info: Processing ended: Thu Nov 06 13:19:00 2014
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+    Warning (13410): Pin "dec1" is stuck at VCC
+Info: Implemented 312 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 43 output pins
+    Info: Implemented 252 logic cells
+    Info: Implemented 8 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 232 megabytes
+    Info: Processing ended: Thu Nov 20 14:19:26 2014
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:07
 
 
